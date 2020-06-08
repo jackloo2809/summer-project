@@ -7,10 +7,10 @@ body {
 
 /*------------------- POST SECTION ------------------------*/
 #post-container{
-	margin: 10vh auto;
+	margin: 5vh auto;
 	border-radius: 2em;
 	width: 80%;
-	height: 30rem;
+	height: 50%;
 	background-color: #f0f0f0;
 	position: relative;
 	overflow: hidden;
@@ -51,10 +51,6 @@ body {
 
 #nextBtn:hover{
 	opacity: 0.6;
-	/*
-	background-color: #f2f2f2;
-	box-shadow: 0 0 1em 1rem #f2f2f2;
-	*/
 }
 
 #prevBtn{
@@ -68,10 +64,6 @@ body {
 
 #prevBtn:hover{
 	opacity: 0.6;
-	/*
-	background-color: #f2f2f2;
-	box-shadow: 0 0 1em 1rem #f2f2f2;
-	*/
 }
 
 
@@ -86,8 +78,8 @@ body {
 /* ----------------------- Main info-----------*/
 #title-info{
 	text-align: center;
-	width: 30rem;
-	margin: 15vh auto;
+	min-width: 50%;
+	margin: 10% auto;
 }
 
 #title-info h1{
