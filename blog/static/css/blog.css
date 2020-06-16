@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial;
+    font-weight: 1;
+}
+html{
+    background-color: #2A2A2A;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/*-------------- Navbar ---------------*/
+
+
+  
+#navbar a:visited {
+    text-decoration: none;
+}
+  
+#navbar a:hover {
+    color: #00E0D3;
+}
+  
+#navbar a{
+    transition: color 0.5s;
+    font-size: 1.2rem;
+    margin-right: 2rem;
+    color: white;
+    cursor: default;
+}
+
+#navbar h1{
+    margin-left:2rem;
+    margin-right: auto;
+    color: white;
+    font-size: 2rem;
+}
+#navbar span{
+    color: #00E0D3;
+}
+
+
+#download{
+    background-color: #00E0D3;
+    margin-right: 2rem;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    color: #8a8a8a;
+    border-radius: 0.6rem;
+    transition: color 0.5s;
+}
+
+#download:hover {
+    color: black;
+    font-weight: 1.5rem;
+  }
+
+#navbar{
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height:10%;
+    position: fixed;
+    background-color: #2A2A2A;
+}
+
+/*----------------- Feature ------------------*/
+#feature{
+    background-image: url('/static/images/brum_bg.png');
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#title{
+    position: relative;
+    left: 13%;
+}
+ #title h1{
+     font-size: 4rem;
+     color: #00E0D3;
+ }
+
+ #title h2{
+    position: relative;
+    bottom: 2rem;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    color: #EAEAEA;
+ }
+
+
+/*---------------- About ----------------*/
+#about{
+    background-image: url('/static/images/keyboard.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 100%;
+    height:80%
+}
+
+/*------------- Footer ---------------*/
+#footer{
+    width: 100%;
+    height:10%;
+    background-color: #2A2A2A;;
+}
