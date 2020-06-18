@@ -13,65 +13,118 @@ body{
 
 /*-------------- Navbar ---------------*/
 
-
-  
-#navbar a:visited {
-    text-decoration: none;
-}
-  
-#navbar a:hover {
-    color: #00E0D3;
-}
-  
-#navbar a{
-    transition: color 0.5s;
-    font-size: 1.2rem;
-    margin-right: 2rem;
-    color: white;
-    cursor: default;
-}
-
-#navbar h1{
-    margin-left:2rem;
-    margin-right: auto;
-    color: white;
-    font-size: 2rem;
-}
-#navbar span{
-    color: #00E0D3;
-}
-
-
-#download{
-    background-color: #00E0D3;
-    margin-right: 2rem;
-    font-size: 1.2rem;
-    padding: 0.5rem;
-    color: #8a8a8a;
-    border-radius: 0.6rem;
-    transition: color 0.5s;
-}
-
-#download:hover {
-    color: black;
-    font-weight: 1.5rem;
-  }
-
 #navbar{
     z-index: 10;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-    height:10%;
+    height:8%;
     position: fixed;
     background-color: #2A2A2A;
 }
+  
+#navbar a{
+    text-decoration: none;
+    transition: color 0.5s;
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+    color: white;
+    cursor: default;
+}
 
-/*----------------- Feature ------------------*/
-#feature{
-    background-image: url('/static/images/brum_bg.png');
-    height: 90%;
+#links{
+    margin-right: 2rem;
+}
+
+#navbar a:hover {
+    color: #00E0D3;
+}
+
+#navbar .active{
+    color: #00E0D3;
+}
+
+
+#navbar #logo{
+    margin-left:2rem;
+    margin-right: auto;
+    color: white;
+    font-size: 2rem;
+}
+
+#navbar span{
+    color: #00E0D3;
+}
+
+
+#download{
+    display: none;
+    background-color: #00E0D3;
+    margin-left: 2rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    color: #636363;
+    border-radius: 0.6rem;
+    border-width: 0;
+    transition: color 0.5s;
+}
+
+#download:hover {
+    color: black;
+    font-weight: 1.5rem;
+}
+
+
+.menu-toggle{
+    display: none;
+}
+@media screen and (max-width: 768px){
+
+     .menu-toggle{
+        position: relative;
+        right: 1rem;
+        display: block;
+    }
+
+    #links{
+        background-color: #2A2A2A;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: -100%;
+        height: 100vh;
+        transition: .5s;
+    }
+
+    #links a{
+        display: block;
+        border-style: none none solid none;
+        border-color: #00E0D3;
+        border-width: 0.1em;
+        margin: 0 1rem;
+        padding: 0.5rem 0;
+        text-align: center;
+    }
+
+    #navbar .show-menu{
+        left: 0%;
+    }
+
+    #download{
+        display:none;
+    }
+
+}
+
+/*----------------- Feature ------------------*/ 
+ #feature{
+    background-image: url("/static/images/brum_bg.png");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,29 +132,53 @@ body{
 
 #title{
     position: relative;
-    left: 13%;
+    width: 100%;
+    padding-left: 13%;
 }
  #title h1{
-     font-size: 4rem;
+     font-size: 4.5rem;
      color: #00E0D3;
  }
 
  #title h2{
     position: relative;
-    bottom: 2rem;
+    bottom: 2.5rem;
     margin: 0 0 0.5rem 0;
     font-size: 1.5rem;
     color: #EAEAEA;
  }
 
+.down{
+    position: absolute;
+    bottom:1rem;
+}
+ @media screen and (max-width: 768px){
+
+   #title{
+       text-align: center;
+       padding: 0;
+   } 
+
+    #title h1{
+        font-size: 3.1rem;
+        color: #00E0D3;
+    }
+    #title h2{
+        font-size: 1.2rem;
+        bottom: 2rem;
+     }
+    
+ }
+
 
 /*---------------- About ----------------*/
 #about{
-    background-image: url('/static/images/keyboard.jpg');
-    background-size: 100% auto;
+    background-image: url("/static/images/keyboard.jpg");
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
     width: 100%;
-    height:80%
+    height:82%;
 }
 
 /*------------- Footer ---------------*/
