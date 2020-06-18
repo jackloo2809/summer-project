@@ -171,7 +171,7 @@ body{
 #about{
     background-image: url("/static/images/keyboard.jpg");
     background-size: cover;
-    background-position: center center;
+    background-position: 45% center;
     background-repeat: no-repeat;
     display: flex;
     width: 100%;
@@ -185,6 +185,7 @@ body{
     top: -10%;
     left:10%;
     width:40%;
+    max-width:40rem;
     text-align: center;
 }
 
@@ -192,8 +193,9 @@ body{
 @media screen and (max-width: 768px){
     #info{
         padding-left: 1rem;
+        font-size: 0.8rem;
         width: 50%;
-        left: 5%;
+        top:-10%;
     }
 }
 
