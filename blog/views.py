@@ -4,9 +4,15 @@ from .models import Post
 from .forms import PostForm
 from django.shortcuts import redirect
 
-def post_list(request):
+def home(request):
+    return render(request, 'home.html', {})
+
+def blog(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog/home.html', {'posts': posts})
+    return render(request, 'blog.html', {'posts': posts})
+
+def profile(request):
+    return render(request, 'profile.html', {})
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
