@@ -1,0 +1,64 @@
+{% load static %}
+<html>
+    <head>
+        <title>Jacks Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+    <div id="navbar">
+        <a href="#" id="logo"><span>{</span>Jack Lewis<span>}</span></a>
+        <div id="links">
+            <a  href="#" class="active">Home</a>
+            <a href="#">Blog</a>
+            <a href="#">Profile</a>
+        </div>
+        <svg class="bi bi-list" id="menu-toggle" width="2em" height="2em" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+    
+    </div>
+    
+    <div id="feature">
+
+        <div id="title">
+            <h1>Jack Lewis</h1>
+            <h2>Student at University of Birmingham</h2>
+            <h2>Studying Computer Science</h2>
+        
+            <button id="download">Download CV</button>
+            
+        </div>
+
+        <svg class="bi bi-chevron-double-down down" width="100%" height="4%" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+        </svg>
+
+    </div>
+    
+    <div id="about">
+        <div id="info">
+            <h1>About</h1>
+            <p>This website is made for my summer project. It is meant to 
+                showcase my frontend skills as well as my understanding of the framework Django. 
+                I've done a lot of research in how to layout a webpage and make it responsive which should be shown by this website. 
+                I go into more detail on how I've made this website and 
+                skills I've developed in the process in the Blog section</p>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="images">
+            <a href="#"><img src="{% static '/images/facebook.svg'%}"></a>
+            <a href="#"> <img src="{% static '/images/linkedin.svg'%}"></a>
+            <a href="#"><img src="{% static '/images/ig.svg'%}"></a>
+        </div>
+      
+        <h3>Email: jxl1358@student.bham.ac.uk</h3>
+    </div>
+
+    <script src="{% static 'scripts/index.js' %}"></script>
+</body>
+</html>
