@@ -113,10 +113,11 @@ body{
     justify-content: center;
 }
 
-#images a img{
-    margin: 0 0.8rem;
+#images img{
+    margin: 0 0.7rem;
     height: 100%;
 }
+
 
 #footer h3{
     width: 100%;
