@@ -11,6 +11,21 @@
 
 {%block content%}
     <div id="content">
-
+        <img src="{% static 'images/blog_banner.jpg'%}">
+        <h1>Blog</h1>
+        <div id="posts">
+            <ul>
+                {% for post in posts%}
+                <li class="post">
+                    <h2 class="date">{{post.published_date.date}}</h2>
+                    <a class="post-title">{{post.title}}</a>
+                    <p class="text">{{post.text}}</p>  
+                </li>  
+                {% endfor %}
+            </ul>
+            
+        </div>
     </div>
+
+    <script src="{%static 'scripts/blog.js'%}"></script>
 {%endblock%}

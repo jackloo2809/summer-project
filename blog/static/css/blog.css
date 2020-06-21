@@ -1,3 +1,87 @@
 #content{
-    height:90%;
+    min-height: 90%;
+    overflow: auto;
+    padding-top: 4rem;
+    background-color: whitesmoke;
 }
+#content img {
+    position: relative;
+    height: 7rem;
+    width: 100%;
+}
+
+#content h1{
+    margin: 0;
+    position: absolute;
+    color: white;
+    font-weight: 3;
+    font-size: 3rem;
+    margin: 0;
+    top: 6rem;
+    left: 2rem;
+}
+
+/*-------------------- Posts ------------------*/
+#posts{
+    margin: 1rem 10% 1rem 30%;
+    width: 60%;
+    overflow: auto;
+}
+#posts a{
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+#content ul{
+    margin: 0;
+    padding-left: 1rem;
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-left-color: #2A2A2A;
+}
+
+/* formats li*/
+.post{
+    list-style: none;
+    padding-bottom: 2rem;
+}
+
+
+/* ble dots*/
+#content ul li::before{
+    content: '';
+    position: absolute;
+    width: 0.9rem;
+    height: 0.9rem;
+    background-color: #00E0D3;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    left:calc(30% - .45rem - 1px);
+}
+
+#content ul li:nth-last-child(1){
+    padding-bottom: 0;
+}
+.post .date{
+    box-shadow: -.2rem .2rem .2rem rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    font-weight: 500;
+    position: absolute;
+    right: 72%;
+    margin: 0;
+    color: #2A2A2A;
+    padding: .4rem 1rem;
+    background-color: #00E0D3;
+    border-radius: 1rem;
+}
+
+.text{
+    display: block;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.5s;
+}
+
+

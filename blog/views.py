@@ -7,9 +7,6 @@ from django.shortcuts import redirect
 def home(request):
     return render(request, 'home.html', {})
 
-def fd(request):
-    return render(request, 'fathers-day.html', {})
-
 def blog(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog.html', {'posts': posts})
