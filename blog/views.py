@@ -3,13 +3,21 @@ from django.utils import timezone
 from .models import Post
 from .forms import PostForm
 from django.shortcuts import redirect
+from .filters import Blog_filter
 
 def home(request):
     return render(request, 'home.html', {})
 
 def blog(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog.html', {'posts': posts})
+    myfilter = Blog_filter(request.GET, queryset=posts)
+    posts = myfilter.qs
+    orderVal = request.GET.get('order')
+    if orderVal == 'up':
+        posts = posts.filter(published_date__lte=timezone.now()).order_by('published_date')
+    elif orderVal == 'down':
+        posts = posts.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    return render(request, 'blog.html', {'posts': posts, 'myfilter': myfilter, 'order': orderVal,})
 
 def profile(request):
     return render(request, 'profile.html', {})

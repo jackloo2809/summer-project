@@ -10,22 +10,33 @@
 {% endblock %}
 
 {%block content%}
-    <div id="content">
-        <img src="{% static 'images/blog_banner.jpg'%}">
-        <h1>Blog</h1>
-        <div id="posts">
-            <ul>
-                {% for post in posts%}
-                <li class="post">
-                    <h2 class="date">{{post.published_date.date}}</h2>
-                    <a class="post-title">{{post.title}}</a>
-                    <p class="text">{{post.text}}</p>  
-                </li>  
-                {% endfor %}
-            </ul>
-            
-        </div>
-    </div>
+<div id="post-list">
+    <form method="GET" id="form">
+        {{myfilter.form}}
+        <label for="order">Order:</label>
+        <select id="order" name='order'>
+            <option value="up" 
+                {% if order == "up" %}selected {%endif%}>
+                Ascending
+            </option>
+            <option value="down" 
+                {% if order == "down" %}selected {%endif%}>
+                Descending
+            </option>
+        </select>
+        <button type="submit">Search</button>
+    </form>
+    <ul>
+        {% for post in posts%}
+            <li class="post">
+                <h2 class="date">{{post.published_date.date}}</h2>  
+                <a class="post-title">{{post.title}}</a>
+                <p class="text">{{post.text}}</p>  
+            </li>  
+        {% endfor %}            
+    </ul>
+
+</div>
 
     <script src="{%static 'scripts/blog.js'%}"></script>
 {%endblock%}
