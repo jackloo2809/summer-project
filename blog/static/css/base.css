@@ -13,17 +13,26 @@ body{
     margin: 0;
 }
 
+#page-container{
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
 /*-------------- Navbar ---------------*/
 
 #navbar{
+    position: fixed;
     z-index: 10;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
     height: 4rem;
-    min-height: 2.5rem;
-    position: fixed;
+    min-height: 4rem;
+    max-height: 4rem;
+    top: 0;
     background-color: #2A2A2A;
 }
   
@@ -98,9 +107,23 @@ body{
 
 }
 
+
+/*-------------- Content ---------------*/
+#content-wrapper{
+    position: relative;
+    background-color:whitesmoke;
+    min-height: 100%;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+
+}
+
 /*------------- Footer ---------------*/
 #footer{
+    position: absolute;
+    bottom: 0;
     width: 100%;
+    max-height: 5rem;
     height:5rem;
     min-height: 5rem;
     background-color: #2A2A2A;
