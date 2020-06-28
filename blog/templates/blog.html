@@ -11,31 +11,49 @@
 
 
 {%block content%}
-<div id="post-list">
-    <form method="GET" id="form">
-        {{myfilter.form}}
-        <label for="order">Order:</label>
-        <select id="order" name='order'>
-            <option value="up" 
-                {% if order == "up" %}selected {%endif%}>
-                Ascending
-            </option>
-            <option value="down" 
-                {% if order == "down" %}selected {%endif%}>
-                Descending
-            </option>
-        </select>
-        <button type="submit">Search</button>
-    </form>
+
+<div id="left-container">
+    
     <ul>
         {% for post in posts%}
             <li class="post">
-                <h2 class="date">{{post.published_date.date}}</h2>  
-                <a class="post-title">{{post.title}}</a>
+                <div class="heading">
+                    <a class="post-title"><h1>{{post.title}}</h1></a>
+                    <h3 class="date"><span class="blue-dot">&#8226;</span> {{post.catagory}} <span class="blue-dot">&#8226;</span> {{post.published_date.day}}/{{post.published_date.month}}/{{post.published_date.year}} <span class="blue-dot">&#8226;</span></h3>
+                </div>
+                
                 <p class="text">{{post.text}}</p>  
             </li>  
         {% endfor %}            
     </ul>
 
 </div>
+
+<div id="right-container">
+    <h1>Blog</h1>
+    <form method="GET" id="form">
+        <div id="labels">
+            <label for="title">Title:</label>
+            <label for="Catagory">Catagory:</label>
+            <label for="order">Order:</label>
+        </div>
+        <div id="inputs">
+            {{myfilter.form.title}}
+            {{myfilter.form.catagory}}
+            <select id="order" name='order'>
+                <option value="up" 
+                    {% if order == "up" %}selected {%endif%}>
+                    Ascending
+                </option>
+                <option value="down" 
+                    {% if order == "down" %}selected {%endif%}>
+                    Descending
+                </option>
+            </select>
+            <button type="submit">Search</button>
+        </div> 
+    </form>
+</div>
+
+
 {%endblock%}

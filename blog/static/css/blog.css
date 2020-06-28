@@ -1,1 +1,120 @@
 
+
+/*---------- left-container -------------*/
+#left-container{
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    overflow: scroll;
+    height: calc(100% - 9rem);
+    width: 50%;
+}
+
+/*------------ post-list ----------------*/
+#left-container ul{
+    width: 90%;
+    padding: 0;
+    margin: 1rem 5%;
+}
+.post{
+    list-style: none;
+}
+.heading{
+    color: white;
+    background-color: #2a2a2a;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+}
+.post-title h1{
+    margin: 0;
+    color: #00E0D3;
+}
+.heading h3{
+    margin: 0;
+    font-size: 0.9rem;
+}
+.blue-dot{
+    color: #00E0D3;
+}
+.text{
+    padding: .5rem 1rem;
+}
+
+
+
+
+/*---------- right-container -------------*/
+#right-container{
+    background-image: url("/static/images/blog_bg.png");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    height: calc(100% - 9rem);
+    width: 50%;
+}
+/*---------- form layout ------------*/
+#form{
+    display: flex;
+    overflow: auto;
+    width: fit-content;
+    margin: 3rem auto 0 auto;
+    background-color: none;
+}
+
+#labels{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: right;
+}
+
+#inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#form button{
+    width: 70%;
+    align-self: flex-end;
+    padding: .2rem .7rem;
+    background-color: #00E0D3;
+    color: black;
+    float: right;
+    clear:left;
+    border-radius: .5rem;
+    border:none;
+    outline: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+#form label{
+    float:left;
+    margin: .6rem .5rem .6rem 0;
+    color:white;
+    clear: both;
+}
+#form input, select{
+    float:right;
+    color: white;
+    margin: .6rem 0;
+    width: 8rem;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    border-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 0.1rem;
+    outline: 0px;
+    
+}
+
+#right-container h1{
+    text-shadow: -.5rem .5rem .5rem #1a1a1a;
+    margin: 10rem auto 0 auto;
+    width: fit-content;
+    font-size: 10rem;
+    font-weight: 600;
+    color: whitesmoke;
+}
