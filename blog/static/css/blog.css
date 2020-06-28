@@ -14,6 +14,7 @@
 #left-container ul{
     width: 90%;
     padding: 0;
+    background-color: whitesmoke;
     margin: 1rem 5%;
 }
 .post{
@@ -37,7 +38,12 @@
     color: #00E0D3;
 }
 .text{
-    padding: .5rem 1rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: 0 1rem;
+    min-height: 3rem;
+    max-height: 3rem;
+    overflow: hidden;
 }
 
 
@@ -50,7 +56,10 @@
     background-size: cover;
     position: absolute;
     right: 0;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
     height: calc(100% - 9rem);
     width: 50%;
 }
@@ -58,8 +67,7 @@
 #form{
     display: flex;
     overflow: auto;
-    width: fit-content;
-    margin: 3rem auto 0 auto;
+    margin: 0 auto;
     background-color: none;
 }
 
@@ -112,9 +120,9 @@
 
 #right-container h1{
     text-shadow: -.5rem .5rem .5rem #1a1a1a;
-    margin: 10rem auto 0 auto;
-    width: fit-content;
+    text-align: center;
     font-size: 10rem;
     font-weight: 600;
+    margin: 1.5rem;
     color: whitesmoke;
 }
