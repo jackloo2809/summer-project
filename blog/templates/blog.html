@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load blog_extra%}
 
 {%block title%}
     <title>JL - Blog</title>
@@ -15,10 +16,10 @@
 <div id="left-container">
     
     <ul>
-        {% for post in posts%}
+        {% for post in page_obj%}
             <li class="post">
                 <div class="heading">
-                    <a class="post-title"><h1>{{post.title}}</h1></a>
+                    <a class="post-title">{{post.title}}</a>
                     <h3 class="date"><span class="blue-dot">&#8226;</span> {{post.catagory}} <span class="blue-dot">&#8226;</span> {{post.published_date.day}}/{{post.published_date.month}}/{{post.published_date.year}} <span class="blue-dot">&#8226;</span></h3>
                 </div>
                 
@@ -27,6 +28,16 @@
         {% endfor %}            
     </ul>
 
+    <div id="paginator-controls">
+        {% if page_obj.has_previous%}
+            <a href="blog?{% url_replace request 'page' page_obj.previous_page_number%}">Previous</a>
+          {%endif%}
+               page {{page_obj.number}} of {{paginator.num_pages}}
+         {% if page_obj.has_next%}
+            <a href="blog?{% url_replace request 'page' page_obj.next_page_number%}">Next</a>
+        {%endif%}
+    </div>
+    
 </div>
 
 <div id="right-container">

@@ -4,12 +4,14 @@ from .models import Post
 from .forms import PostForm
 from django.shortcuts import redirect
 from .filters import Blog_filter
+from django.core.paginator import Paginator
 
 def home(request):
     return render(request, 'home.html', {})
 
 def blog(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+
     myfilter = Blog_filter(request.GET, queryset=posts)
     posts = myfilter.qs
     orderVal = request.GET.get('order')
@@ -17,7 +19,14 @@ def blog(request):
         posts = posts.filter(published_date__lte=timezone.now()).order_by('published_date')
     elif orderVal == 'down':
         posts = posts.filter(published_date__lte=timezone.now()).order_by('-published_date')
-    return render(request, 'blog.html', {'posts': posts, 'myfilter': myfilter, 'order': orderVal,})
+
+
+     #------------------paginator -----------------
+    p = Paginator(posts, 2)
+    page_number = request.GET.get('page')
+    page_obj = p.get_page(page_number)
+
+    return render(request, 'blog.html', {'posts': posts, 'myfilter': myfilter, 'order': orderVal, 'paginator':p,'page_obj': page_obj})
 
 def profile(request):
     return render(request, 'profile.html', {})
