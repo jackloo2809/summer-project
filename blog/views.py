@@ -3,8 +3,6 @@ from django.utils import timezone
 from .models import Post
 from .forms import PostForm
 from django.shortcuts import redirect
-from .filters import Blog_filter
-from django.core.paginator import Paginator
 
 def home(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:3]
