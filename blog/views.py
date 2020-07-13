@@ -7,11 +7,14 @@ from .filters import Blog_filter
 from django.core.paginator import Paginator
 
 def home(request):
-    return render(request, 'home.html', {})
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:3]
+    return render(request, 'homepage.html', {'posts':posts})
 
 def blog(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
 
+    """
+    #----------------- FILTER --------------------
     myfilter = Blog_filter(request.GET, queryset=posts)
     posts = myfilter.qs
     orderVal = request.GET.get('order')
@@ -22,9 +25,10 @@ def blog(request):
 
 
      #------------------paginator -----------------
-    p = Paginator(posts, 2)
+    p = Paginator(posts, 4)
     page_number = request.GET.get('page')
     page_obj = p.get_page(page_number)
+    """
 
     return render(request, 'blog.html', {'posts': posts, 'myfilter': myfilter, 'order': orderVal, 'paginator':p,'page_obj': page_obj})
 

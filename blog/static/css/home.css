@@ -1,110 +1,61 @@
+.html{
+    padding: 0;
+    margin: 0;
+}
 
+.body{
+    box-sizing: border-box;
+}
 
-/*----------------- Feature ------------------*/ 
-#feature{
-    background-image: url("/static/images/brum_bg.png");
-    background-size: cover;
-    background-position: center center;
-    position: relative;
-    height: 100%;
+/*-------------- navbar --------------*/
+#search-bar{
+        border: 0;
+        outline: 0;
+        background: transparent;
+        border-bottom: 1px solid black;
+        transition: border-color .5s;
+}
+
+#search-bar:focus{
+    border-color: #24a6f2;
+}
+
+#search-btn{
+    border:none;
+    background-color: white;
+    transition: color .5s;
+}
+
+/*--------------HEADER ---------------*/
+.banner{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-#title{
-    position: relative;
-    width: 100%;
-    padding-left: 13%;
-}
- #title h1{
-     font-size: 4.5rem;
-     color: #00E0D3;
- }
-
- #title h2{
-    position: relative;
-    bottom: 3rem;
-    margin: 0 0 0.5rem 0;
-    font-size: 1.5rem;
-    color: #EAEAEA;
- }
-
-
- #download{
-    background-color: rgba(0, 0,0,0);
-    border-style: solid;
-    border-radius: 0.6rem;
-    border-color: #00E0D3;
-    border-width: 0.1rem;
-    font-size: 1.2rem;
-    color: white;
-    padding: 0.7rem;
-    transition: .5s;
-}
-
-#download:hover{
-    background-color: #00E0D3;
-    color: black;
-}
-
-.down{
-    position: absolute;
-    bottom:1rem;
-}
- @media screen and (max-width: 768px){
-
-   #title{
-       text-align: center;
-       padding: 0;
-   } 
-
-    #title h1{
-        font-size: 3.1rem;
-        color: #00E0D3;
-    }
-    #title h2{
-        font-size: 1.2rem;
-        bottom: 2rem;
-     }
-    
- }
-
-
-/*---------------- About ----------------*/
-#about{
-    background-image: url("/static/images/keyboard.jpg");
+    background-image: url("/static/images/brum_bg.png");
+    background-position: center center;
     background-size: cover;
-    background-position: 45% center;
-    background-repeat: no-repeat;
-    display: flex;
-    width: 100%;
-    height:82%;
+    color:white;
+    height: 20rem;
 }
 
-
-#info{
-    opacity: 0;
-    text-align: justify;
-    position: relative;
-    align-self: center;
-    top: -10%;
-    left:10%;
-    width:40%;
-    max-width:40rem;
+.header{
     text-align: center;
-    transition: 1s;
 }
-#info-show{
-    opacity:1;
+
+.header h1{
+    font-size: 4rem;
+}
+.header p{
+    font-size: 1.2rem;
 }
 
 
-@media screen and (max-width: 768px){
-    #info{
-        padding-left: 1rem;
-        font-size: 0.8rem;
-        width: 50%;
-        top:-10%;
-    }
+/*-----------------LATEST -------------------*/
+.latest{
+    background-color: #21394A;
+    color: white;
+   
 }
+
+
+
