@@ -12,6 +12,9 @@
         border: 0;
         outline: 0;
         background: transparent;
+        -webkit-appearance: none;
+    
+    border-radius: 0;
         border-bottom: 1px solid black;
         transition: border-color .5s;
 }
@@ -23,16 +26,11 @@
 #search-btn{
     all: unset;
     border:none;
-    -webkit-appearance: none;
-    
-    border-radius: 0;
     background-color: white;
     transition: color .5s;
 }
 
-input{
-    border:0;
-}
+
 /*--------------HEADER ---------------*/
 .banner{
     display: flex;
