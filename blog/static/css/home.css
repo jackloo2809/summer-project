@@ -23,20 +23,13 @@
 #search-btn{
     all: unset;
     border:none;
+    -webkit-appearance: none;
+    border-radius: 0;
     background-color: white;
     transition: color .5s;
 }
 
 
-textarea,
-input.text,
-input[type="text"],
-input[type="button"],
-input[type="submit"],
-.input-checkbox {
--webkit-appearance: none;
-border-radius: 0;
-}
 /*--------------HEADER ---------------*/
 .banner{
     display: flex;
