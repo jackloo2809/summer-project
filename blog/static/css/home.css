@@ -24,12 +24,15 @@
     all: unset;
     border:none;
     -webkit-appearance: none;
+    
     border-radius: 0;
     background-color: white;
     transition: color .5s;
 }
 
-
+input{
+    border:0;
+}
 /*--------------HEADER ---------------*/
 .banner{
     display: flex;

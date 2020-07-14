@@ -15,24 +15,21 @@
             <!--------------------------- NAVBAR-------------------------------->
             <div class="row py-2">
                 <!-------------------Seach Bar--------------------------->
+                
+
                 <div class="col-md-10 offset-md-1 position-relative">
                     <div class="position-absolute my-2 " style="right: 0;">
+
+                    
+
                         <form class="form-group my-2 d-flex" action="{% url 'blog' %}" method="GET">
-                            <input id="search-bar" placeholder="Search Blog">
+                            <input id="form-control" placeholder="Search Blog">
                             <button id="search-btn"><span class="fa fa-search"></span></button>
-                            <script>
-                                sbar = document.querySelector('#search-bar')
-                                sbtn = document.querySelector('#search-btn')
-                                sbar.onfocus= ()=>{
-                                    sbtn.style.color = '#24a6f2'
-                                }
-                                sbar.onblur= ()=>{
-                                    sbtn.style.color = 'black'
-                                }
-                            </script>
                         </form>    
+
+                        
                     </div>
-                
+                    
                     <nav class="navbar navbar-expand-md navbar-light px-0 col-4 offset-md-4">
                         
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
