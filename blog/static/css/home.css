@@ -21,6 +21,7 @@
 }
 
 #search-btn{
+    all: unset;
     border:none;
     background-color: white;
     transition: color .5s;
@@ -53,9 +54,22 @@
 /*-----------------LATEST -------------------*/
 .latest{
     background-color: #21394A;
-    color: white;
-   
+    color: white;   
 }
 
+.latest img{
+    width: 100%;
+    height: auto;
+}
+.latest h1{
+    font-weight: 400;
+    font-size: 2rem;
+}
+.latest h2{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
 
-
+.latest p{
+    font-size: 0.8rem;
+}

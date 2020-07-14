@@ -61,27 +61,35 @@
             </div>
 
               <!----------------------Latest----------------------------------->
-              <div class="row ">
-                  <div class="col-md-10 offset-md-1 latest d-md-inline-flex">
-                        {% for post in posts%}
-                        <div class="col-10 col-md-3 " style="overflow: hidden;">
-                            {%if post.image != None%}
-                                <img src={{post.image.url}}>
-                            {%endif%}
-                            <h1>{{post.title}}</h1>
+              <div class="row">
+                  <div class="col-md-10 offset-md-1 latest d-flex flex-column">
+                      
+                        <h1 class="mx-auto my-3">Latest</h1>
+                        <div class="d-md-inline-flex justify-content-center">
+                            {% for post in posts%}
+                            <div class="col-10 offset-1 col-md-3 mx-md-3 " style="overflow: hidden;">
+                                {%if post.image != None%}
+                                    <img src={{post.image.url}}>
+                                {%endif%}
+                                <h2>{{post.title}}</h2>
+                                <p>{{post.text}}</p>
+                            </div>
+                            {% endfor %}
                         </div>
-                            
-                        {% endfor %}
+                        
+                      
+                        
                   </div>
               </div>
 
 
               <div class="row">
-                <div class="col-8 col-md-6 offset-2 offset-md-3">
-                    <p class="text-center" style="color: rgba(42,42,42, 0.75);">If you have any questions related to anything I've put on <br>
+                <div class="mx-auto my-4">
+                    <p class="text-center" style="color: rgba(42,42,42, 0.75);">
+                        If you have any questions related to anything I've put on <br>
                         this website then please feel free to send me an email below <br>
                         and I'll be sure to get back to you.</p>
-                    </div>
+                </div>
               </div>  
               <div class="row">
                     
