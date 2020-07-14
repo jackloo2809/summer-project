@@ -27,7 +27,7 @@
     transition: color .5s;
 }
 
-input[type="text"]{
+input[type=text]{
     -webkit-appearance: none;
     border-radius: 0;
 }
