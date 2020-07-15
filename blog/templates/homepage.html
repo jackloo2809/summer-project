@@ -14,19 +14,16 @@
 
             <!--------------------------- NAVBAR-------------------------------->
             <div class="row py-2">
-                <!-------------------Seach Bar--------------------------->
-                
-
+                <!-------------------Seach Bar-------------------------->
                 <div class="col-md-10 offset-md-1 position-relative">
                     <div class="position-absolute my-2 " style="right: 0;">
                         <form class="form-group my-2 d-flex px-3 px-md-0" action="{% url 'blog' %}" method="GET">
-                            <input id="search-bar" placeholder="Search Blog">
-                            <button id="search-btn"><span class="fa fa-search"></span></button>
+                            <input id="search-bar" name="title" placeholder="Search Blog">
+                            <button id="search-btn" type="submit"><span class="fa fa-search" id="search-icon"></span></button>
                         </form>    
                     </div>
                     
-                    <nav class="navbar navbar-expand-md navbar-light px-0 col-4 offset-md-4">
-                        
+                    <nav class="navbar navbar-expand-md navbar-light px-0 col-4 offset-md-4">    
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -38,10 +35,10 @@
                             </ul>
                         </div>       
                     </nav>
-                
                 </div>
             </div>
             
+            <!-------------------------Feature--------------------------------->
             <div class="row">
                 <div class="col-md-10 offset-md-1 mb-4 banner ">
                     <div class="header">
@@ -53,10 +50,9 @@
             </div>
 
               <!----------------------Latest----------------------------------->
-              <div class="row">
-                  <div class="col-md-10 offset-md-1 latest d-flex flex-column">
-                      
-                        <h1 class="mx-auto my-3">Latest</h1>
+            <div class="row">
+                <div class="col-md-10 offset-md-1 latest d-flex flex-column">  
+                    <h1 class="mx-auto my-3">Latest</h1>
                         <div class="d-md-inline-flex justify-content-center">
                             {% for post in posts%}
                             <div class="col-10 offset-1 col-md-3 mx-md-3 " style="overflow: hidden;">
@@ -68,25 +64,42 @@
                             </div>
                             {% endfor %}
                         </div>
-                        
-                      
-                        
-                  </div>
-              </div>
+                </div>
+            </div>
 
 
-              <div class="row">
+            <div class="row">
                 <div class="mx-auto my-4">
                     <p class="text-center" style="color: rgba(42,42,42, 0.75);">
                         If you have any questions related to anything I've put on <br>
                         this website then please feel free to send me an email below <br>
                         and I'll be sure to get back to you.</p>
                 </div>
-              </div>  
-              <div class="row">
-                    
-              </div>
+            </div>
 
+
+            <!----------------------Email Form------------------------------->
+
+            <div class="row">
+                  <div class="col-md-10 offset-md-1 email p-3">
+                      <h1 class="text-center" style="color:#363636;">Contact</h1>
+                      <form>
+                        <input class="form-control form-control-sm my-2 col-md-3 offset-md-3 grey-border" type="text" placeholder="Name">
+                        <input class="form-control form-control-sm my-2 col-md-6 offset-md-3 grey-border" type="text" placeholder="Subject">
+                        <textarea class="form-control form-control-sm my-2 col-md-6 offset-md-3 grey-border" id="exampleFormControlTextarea1" rows="3" placeholder="Content"></textarea>
+                        <button type="button" class="btn btn-outline-secondary offset-md-3 btn-sm grey-border">Send</button>
+                    </form>
+                  </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 offset-md-1 text-center links my-3">
+                    <a href="#"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-github-square fa-3x" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+                </div>
+                
+            </div>
         </div>
     </body>
 </html>

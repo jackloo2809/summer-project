@@ -13,10 +13,13 @@
         outline: 0;
         background: transparent;
         -webkit-appearance: none;
-    
-    border-radius: 0;
-        border-bottom: 1px solid black;
+        border-radius: 0;
+        border-bottom: 1px solid #7d7d7d;
         transition: border-color .5s;
+}
+
+#search-icon{
+    color: #7d7d7d;
 }
 
 #search-bar:focus{
@@ -76,4 +79,18 @@
 
 .latest p{
     font-size: 0.8rem;
+}
+
+
+/*------------------Email------------------*/
+.email{
+    background-color: #F9F9F9;
+}
+
+.grey-border{
+    border-color: #808080;
+}
+
+.links a{
+    color:black;
 }

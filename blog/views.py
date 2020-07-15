@@ -10,7 +10,7 @@ def home(request):
 
 def blog(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-
+    print(request.POST)
     """
     #----------------- FILTER --------------------
     myfilter = Blog_filter(request.GET, queryset=posts)
@@ -28,7 +28,7 @@ def blog(request):
     page_obj = p.get_page(page_number)
     """
 
-    return render(request, 'blog.html', {'posts': posts, 'myfilter': myfilter, 'order': orderVal, 'paginator':p,'page_obj': page_obj})
+    return render(request, 'blog.html', {'posts': posts,})
 
 def profile(request):
     return render(request, 'profile.html', {})
