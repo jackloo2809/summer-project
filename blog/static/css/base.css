@@ -1,0 +1,45 @@
+.html{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    box-sizing: border-box;
+}
+
+
+/*-------------- navbar --------------*/
+#search-bar{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    border-radius: 0;
+    border-bottom: 1px solid #7d7d7d;
+    transition: border-color .5s;
+}
+
+#search-icon{
+color: #7d7d7d;
+}
+
+#search-bar:focus{
+border-color: #24a6f2;
+}
+
+#search-btn{
+all: unset;
+border:none;
+background-color: white;
+transition: color .5s;
+}
+
+
+.content{
+    min-height: 80%;
+}
+
+/*------------- links---------------*/
+.links a {
+    color: black;
+  }

@@ -6,28 +6,10 @@ from django.shortcuts import redirect
 
 def home(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:3]
-    return render(request, 'homepage.html', {'posts':posts})
+    return render(request, 'home.html', {'posts':posts})
 
 def blog(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    print(request.POST)
-    """
-    #----------------- FILTER --------------------
-    myfilter = Blog_filter(request.GET, queryset=posts)
-    posts = myfilter.qs
-    orderVal = request.GET.get('order')
-    if orderVal == 'up':
-        posts = posts.filter(published_date__lte=timezone.now()).order_by('published_date')
-    elif orderVal == 'down':
-        posts = posts.filter(published_date__lte=timezone.now()).order_by('-published_date')
-
-
-     #------------------paginator -----------------
-    p = Paginator(posts, 4)
-    page_number = request.GET.get('page')
-    page_obj = p.get_page(page_number)
-    """
-
     return render(request, 'blog.html', {'posts': posts,})
 
 def profile(request):

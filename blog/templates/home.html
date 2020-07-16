@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static%}
+
+{% block head %}
+    <link rel = "stylesheet" type = "text/css" href = "{%static 'css/home.css'%}" />
+{% endblock %}
+{% block content %}
+
+<!-------------------------Feature--------------------------------->
+<div class="row">
+    <div class="col-md-10 offset-md-1 mb-4 banner ">
+        <div class="header">
+            <h1>Jack Lewis</h1>
+            <p>Student at University of computer science<br>
+                Studying computer Science</p>
+        </div>
+    </div>
+</div>
+
+ <!-------------------------About --------------------->
+ <div class="row">
+    <div class="col-10 offset-1 col-md-8 offset-md-2 about text-center my-3">
+        <p id="about-info">
+            Hi I'm Jack. Im currently a second year computer science student 
+            at University of Birmingham. In this blog website I will talk about 
+            any experiences I get throughout my degree whether they
+            are computer science or anything else uni related.
+        </p>
+        <button type="button" class="btn" id="about-btn">Learn More</button>
+    </div>
+</div>
+
+  <!----------------------Latest----------------------------------->
+<div class="row">
+    <div class="col-md-10 offset-md-1 latest d-flex flex-column my-3">  
+        <h1 class="mx-auto my-3">Latest</h1>
+            <div class="d-md-inline-flex justify-content-center">
+                {% for post in posts%}
+                <div class="col-10 offset-1 col-md-3 mx-md-3 " style="overflow: hidden;">
+                    {%if post.image != None%}
+                        <img src={{post.image.url}}>
+                    {%endif%}
+                    <h2>{{post.title}}</h2>
+                    <p>{{post.text}}</p>
+                </div>
+                {% endfor %}
+            </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="mx-auto ">
+        <p class="text-center" style="color: rgba(42,42,42, 0.75);">
+            If you have any questions related to anything I've put on <br>
+            this website then please feel free contact me through any of my<br>
+            social media listed below.</p>
+    </div>
+</div>
+{% endblock %}
