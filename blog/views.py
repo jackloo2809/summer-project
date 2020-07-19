@@ -6,14 +6,14 @@ from django.shortcuts import redirect
 
 def home(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:3]
-    return render(request, 'home.html', {'posts':posts})
+    return render(request, 'home.html', {'posts':posts, 'page_title':'home'})
 
 def blog(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog.html', {'posts': posts,})
+    return render(request, 'blog.html', {'posts': posts, 'page_title':'blog'})
 
-def profile(request):
-    return render(request, 'profile.html', {})
+def about(request):
+    return render(request, 'about.html', {'page_title':'about'})
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)

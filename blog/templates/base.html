@@ -11,42 +11,53 @@
         {%block head%}{%endblock%}
     </head>
     <body>
-         <!--------------------------- NAVBAR-------------------------------->
-         <div class="row py-2">
-            <!-------------------Seach Bar-------------------------->
-            <div class="col-md-10 offset-md-1 position-relative">
-                <div class="position-absolute my-2 " style="right: 0;">
-                    <form class="form-group my-2 d-flex px-3 px-md-0" action="{% url 'blog' %}" method="GET">
-                        <input id="search-bar" name="title" placeholder="Search Blog">
-                        <button id="search-btn" type="submit"><span class="fa fa-search" id="search-icon"></span></button>
-                    </form>    
+        <div class="container-fluid">
+            <!--------------------------- NAVBAR-------------------------------->
+            <div class="row py-2">
+                <!-------------------Seach Bar-------------------------->
+                <div class="col-md-10 offset-md-1 position-relative">
+                    <div class="position-absolute my-2 " style="right: 0;">
+                        <form class="form-group my-2 d-flex px-3 px-md-0" action="{% url 'blog' %}" method="GET">
+                            <input id="search-bar" name="title" placeholder="Search Blog">
+                            <button id="search-btn" type="submit"><span class="fa fa-search" id="search-icon"></span></button>
+                        </form>    
+                    </div>
+                    
+                    <nav class="navbar navbar-expand-md navbar-light px-0 col-4 offset-md-4">    
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item {%if page_title == 'home'%} active {%endif%}">
+                                    <a class="nav-link" href="{% url 'home' %}">Home</a>
+                                </li>
+                                <li class="nav-item {%if page_title == 'about'%} active {%endif%}">
+                                    <a class="nav-link" href="{%url 'about'%}">About</a>
+                                </li>
+                                <li class="nav-item {%if page_title == 'blog'%} active {%endif%}">
+                                    <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                                </li>
+                            </ul>
+                        </div>       
+                    </nav>
                 </div>
-                
-                <nav class="navbar navbar-expand-md navbar-light px-0 col-4 offset-md-4">    
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mx-auto">
-                            <li class="nav-item active"><a class="nav-link" href='#'>Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href='#'>Blog</a></li>
-                        </ul>
-                    </div>       
-                </nav>
             </div>
-        </div>
-        <div class="content">
+            
             {%block content%}
             {%endblock%}  
-        </div>
-        
-        <div class="row">
-            <div class="col-md-10 offset-md-1 text-center links mb-2">
-                <a href="#"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-github-square fa-3x" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+            
+            
+            <div class="row">
+                <div class="col-md-10 offset-md-1 text-center links mb-2">
+                    <a href="#"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-github-square fa-3x" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+                </div>
             </div>
+
+            
         </div>
+         
     </body>
 </html>

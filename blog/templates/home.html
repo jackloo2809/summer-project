@@ -36,7 +36,7 @@
         <h1 class="mx-auto my-3">Latest</h1>
             <div class="d-md-inline-flex justify-content-center">
                 {% for post in posts%}
-                <div class="col-10 offset-1 col-md-3 mx-md-3 " style="overflow: hidden;">
+                <div class="col-10 offset-1 col-md-3 mx-md-3 post" style="overflow: hidden;">
                     {%if post.image != None%}
                         <img src={{post.image.url}}>
                     {%endif%}

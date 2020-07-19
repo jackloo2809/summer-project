@@ -1,0 +1,34 @@
+.blog-feature{
+    background-image: url("/static/images/blog-image.jpeg");
+    background-size: cover;
+    background-position: center center;
+    height: 9rem;
+}
+
+.blog-feature h1{
+    text-align: center;
+    color: white;
+    font-size: 6rem;
+    text-shadow: -0.4rem .4rem 0.5rem rgba(0,0,0,0.3);
+}
+
+.post-container{
+    background-color: #21394A;
+}
+.post{
+    color: white;
+    border-bottom:solid 1px white;
+}
+
+.post img{
+    width:30%;
+}
+.post h1{
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+.post p{
+    font-weight: 400;
+    font-size: 1rem;
+}

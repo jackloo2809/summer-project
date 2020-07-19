@@ -1,0 +1,74 @@
+{%extends "base.html"%}
+{%load static%}
+{%block head%}
+<title>About</title>
+<link rel = "stylesheet" type = "text/css" href = "{%static 'css/about.css'%}" />
+{%endblock%}
+{%block content%}
+    <div class="row">
+        <div class="col-md-10 offset-md-1 d-flex flex-column flex-md-row align-items-center justify-content-center my-3 px-0">
+            <img src="{%static 'images/profile.jpg'%}" id="profile-pic" class="mr-md-4">
+            <div class="ml-md-4 profile-title">
+                <h1>Jack Lewis</h1>
+                <p class="text-center ">Computer Science student at <br>
+                    University of Birmingham</p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 offset-md-1 my-3">
+            <p class="my-0">
+                Hi I'm jack, I've just finished my first year of computer science. Currently I'm interested in learning more about 
+                artificial intelligence since that was my favourite module. I also like to keep fit from either weightlifting or boxing.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 offset-md-1 d-md-flex justify-content-center bullet-points py-2 my-3">
+            <div class="col-md-3 mx-2">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Java</li>
+                    <li>Html/Css/Javascript</li>                    
+                    <li>Python</li>
+                </ul>
+            </div>
+            <div class="col-md-3 mx-2">
+                <h2>Courses</h2>
+                <ul>
+                    <li>ServiceNow</li>
+                    <li>r43 ai summer course</li>                    
+                    <li>Java masterclass</li>
+                </ul>
+            </div>
+            <div class="col-md-3 mx-2">
+                <h2>Societies</h2>
+                <ul>
+                    <li>Boxing</li>
+                    <li>Benchball</li>                    
+                    <li>Css</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 offset-md-1 d-flex flex-column px-0 py-2">
+            <h2 class="interests">Interests</h2>
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <img src="{%static 'images/fitness.jpg'%}" class="interest-img">
+                </div>
+                <div class="col-12 col-md-4">
+                    <img src="{%static 'images/map.jpg'%}" class="interest-img">
+                </div>
+                <div class="col-12 col-md-4">
+                    <img src="{%static 'images/code.jpeg'%}" class="interest-img">
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+{%endblock%}
