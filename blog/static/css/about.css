@@ -1,6 +1,11 @@
 #profile-pic{
     width: 20%;
+    border-radius: 50%;
     min-width: 12rem;
+}
+
+.info{
+    border-top: solid 1px black;
 }
 
 @media only screen and (max-width: 768px) {
@@ -25,7 +30,32 @@
     margin: 0;
 }
 
+
+.interest-img-container{
+    position: relative;
+    width: 100%;
+}
+
 .interest-img{
+    display: block;
     width: 100%;
     height: auto;
+}
+
+.overlay{
+    opacity:0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(48, 88, 115,0.5);
+    top:0;
+}
+.overlay h1{
+    color: white;
+}
+.overlay:hover{
+    opacity: 1;
 }

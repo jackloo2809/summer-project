@@ -8,7 +8,6 @@
     <div class="row">
         <div class="col-md-10 offset-md-1 blog-feature d-flex align-items-center">
                 <h1 class="mx-auto">Blog</h1>
-            
         </div>
     </div>
     <div class="row">
@@ -19,8 +18,7 @@
                         {%if post.image != None%}
                             <img class="float-md-left mr-md-4  " src={{post.image.url}}>
                         {%endif%}
-
-                        <h2>{{post.title}}</h2>
+                        <a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a>
                         <p>{{post.text}}</p>
                     </div>
                 </div>    

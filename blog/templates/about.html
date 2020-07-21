@@ -7,18 +7,18 @@
 {%block content%}
     <div class="row">
         <div class="col-md-10 offset-md-1 d-flex flex-column flex-md-row align-items-center justify-content-center my-3 px-0">
-            <img src="{%static 'images/profile.jpg'%}" id="profile-pic" class="mr-md-4">
+            <img src="{%static 'images/profile.png'%}" id="profile-pic" class="mr-md-4">
             <div class="ml-md-4 profile-title">
                 <h1>Jack Lewis</h1>
-                <p class="text-center ">Computer Science student at <br>
+                <p class="text-center text-md-left px-md-2">Computer Science student at <br>
                     University of Birmingham</p>
             </div>
             
         </div>
     </div>
     <div class="row">
-        <div class="col-md-10 offset-md-1 my-3">
-            <p class="my-0">
+        <div class="col-md-10 offset-md-1 my-3 px-0">
+            <p class="my-0 info  pt-2 mx-3 mx-md-0">
                 Hi I'm jack, I've just finished my first year of computer science. Currently I'm interested in learning more about 
                 artificial intelligence since that was my favourite module. I also like to keep fit from either weightlifting or boxing.
             </p>
@@ -56,14 +56,30 @@
         <div class="col-md-10 offset-md-1 d-flex flex-column px-0 py-2">
             <h2 class="interests">Interests</h2>
             <div class="row">
-                <div class="col-12 col-md-4">
-                    <img src="{%static 'images/fitness.jpg'%}" class="interest-img">
+                <div class="col-12 col-md-4 ">
+                    <div class="interest-img-container">
+                        <img src="{%static 'images/fitness.jpg'%}" class="interest-img">
+                        <div class="overlay">
+                            <h1>Fitness</h1>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 col-md-4">
-                    <img src="{%static 'images/map.jpg'%}" class="interest-img">
+                    <div class="interest-img-container">
+                        <img src="{%static 'images/map.jpg'%}" class="interest-img">
+                        <div class="overlay">
+                            <h1>Travel</h1>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 col-md-4">
-                    <img src="{%static 'images/code.jpeg'%}" class="interest-img">
+                    <div class="interest-img-container">
+                        <img src="{%static 'images/code.jpeg'%}" class="interest-img">
+                        <div class="overlay">
+                            <h1>Coding</h1>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             

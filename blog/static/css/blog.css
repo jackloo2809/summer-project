@@ -12,23 +12,24 @@
     text-shadow: -0.4rem .4rem 0.5rem rgba(0,0,0,0.3);
 }
 
-.post-container{
-    background-color: #21394A;
-}
 .post{
-    color: white;
-    border-bottom:solid 1px white;
+    border-bottom:solid 1px black;
 }
 
 .post img{
     width:30%;
-}
-.post h1{
-    font-weight: 100;
-    font-size: 2rem;
+    border-radius: 4%;
 }
 
 .post p{
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1rem;
+    
+}
+
+.post a{
+    text-decoration: none;
+    color: #426F8E;
+    font-weight: 300;
+    font-size: 2rem;
 }

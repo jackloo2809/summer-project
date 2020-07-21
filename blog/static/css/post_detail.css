@@ -1,0 +1,13 @@
+.post-container{
+    min-height: 83%;
+}
+
+.post-title:before{
+    content:" ";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: 0;
+    background-color: black;
+}
