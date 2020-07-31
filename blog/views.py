@@ -9,7 +9,9 @@ def home(request):
     return render(request, 'home.html', {'posts':posts, 'page_title':'home'})
 
 def blog(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    title = request.GET.get('title','')
+
+    posts = Post.objects.filter(published_date__lte=timezone.now(), title__icontains=title).order_by('published_date')
     return render(request, 'blog.html', {'posts': posts, 'page_title':'blog'})
 
 def about(request):

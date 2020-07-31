@@ -33,3 +33,25 @@
     font-weight: 300;
     font-size: 2rem;
 }
+
+.blog-picture{
+    min-width:45%;
+    max-width:45%;
+    margin-right: 5%;
+}
+
+.post-description{
+    min-width:50%;
+    max-width:50%;
+}
+
+@media only screen and (max-width: 768px) {
+    .blog-picture{
+        min-width:100%;
+        max-width: 100%;;
+    }
+    .post-description{
+        min-width:100%;
+        max-width:100%;
+    }
+}

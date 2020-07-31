@@ -26,7 +26,7 @@
             any experiences I get throughout my degree whether they
             are computer science or anything else uni related.
         </p>
-        <button type="button" class="btn" id="about-btn">Learn More</button>
+        <a class="btn" id="about-btn" href="{%url 'about'%}">Learn More</a>
     </div>
 </div>
 
@@ -40,7 +40,7 @@
                     {%if post.image != None%}
                         <img src={{post.image.url}}>
                     {%endif%}
-                    <h2>{{post.title}}</h2>
+                    <a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a>
                     <p>{{post.text}}</p>
                 </div>
                 {% endfor %}

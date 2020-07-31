@@ -14,12 +14,14 @@
         <div class="col-md-10 offset-md-1 px-0 my-3 post-container">
                 {% for post in posts %}
                 <div class="row">
-                    <div class=" col-10 offset-1 col-md-8 offset-md-2 post py-3 px-0" style="overflow: hidden;">
+                    <div class="col-10 offset-1 col-md-8 offset-md-2 post py-3 px-0 d-flex flex-column flex-md-row" >
                         {%if post.image != None%}
-                            <img class="float-md-left mr-md-4  " src={{post.image.url}}>
+                            <img class="blog-picture" src={{post.image.url}}>
                         {%endif%}
-                        <a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a>
-                        <p>{{post.text}}</p>
+                        <div class="post-description">
+                            <a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a>
+                            <p>{{post.text}}</p>
+                        </div>
                     </div>
                 </div>    
                 {%endfor%}
