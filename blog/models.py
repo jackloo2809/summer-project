@@ -9,7 +9,7 @@ class Post(models.Model):
     image = models.ImageField(upload_to='images/', null=True)
     
     text = models.TextField()
-    description = models.TextField(max_length=50,null=True)
+    description = models.TextField(max_length=250,null=True)
     published_date = models.DateTimeField(blank=True, null=True)
 
     def publish(self):
