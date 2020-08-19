@@ -11,7 +11,9 @@
     top: 0;
     background-color: black;
 }
-
+.post-text{
+    width: 80%;
+}
 .post-image{
     width: 60%;
     min-width: 550px;
@@ -21,5 +23,9 @@
     .post-image{
         min-width: 100%;
         max-width: 100%;
+    }
+
+    .post-text{
+        width: 100%;
     }
 }

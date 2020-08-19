@@ -20,7 +20,7 @@
                         {%endif%}
                         <div class="post-description">
                             <a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a>
-                            <p>{{post.text}}</p>
+                            <p>{{post.description|linebreaks}}</p>
                         </div>
                     </div>
                 </div>    

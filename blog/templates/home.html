@@ -41,7 +41,7 @@
                         <img src={{post.image.url}}>
                     {%endif%}
                     <a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a>
-                    <p>{{post.text}}</p>
+                    <p>{{post.description}}</p>
                 </div>
                 {% endfor %}
             </div>

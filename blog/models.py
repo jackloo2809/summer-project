@@ -5,18 +5,11 @@ from django.utils import timezone
 
 class Post(models.Model):
 
-    CATAGORY_CHOICES= (
-        ("All", "All"),
-        ("Web","Website"),
-        ("Uni","University"),
-    )
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
-    catagory = models.CharField(max_length=200,choices=CATAGORY_CHOICES, default="All")
     image = models.ImageField(upload_to='images/', null=True)
     
     text = models.TextField()
-    created_date = models.DateTimeField(default=timezone.now)
+    description = models.TextField(max_length=50,null=True)
     published_date = models.DateTimeField(blank=True, null=True)
 
     def publish(self):
